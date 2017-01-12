@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>主页</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="warpper-game game-home">
+<div class="game-content">
+
+  <div class="game-theme tc">
+     <img id="myimage" src="images/home_theme.png" />
+     <div class="game-operate">
+       <a href="03-奖品.html" class="btn-rule"></a>
+       <a href="04-排行榜.html" class="btn-rank"></a>
+       <a class="btn-enter" href="#Enter" role="button" data-toggle="modal"></a>
+       <a class="btn-start" href="02-游戏.html" style="display:none;"></a><!--开始btn-->
+     </div>
+  </div>
+  
+  <div class="home-organizer">
+     <div class="organizer-title"><i></i>举办单位：小玩伴机器人创客营</div>
+     <div class="organizer-p">专为 3~13 岁少儿提供机器人体验与创客课堂培训服务，成立以来一直备受各界媒体、省市领导关注和家长的广泛好评。我们具备完善的乐高、亚太等机器人课程体系，充分锻炼和提高孩子的动手能力，并让孩子在这个成长空间里自由发挥创想，提高孩子科学素养和创新意识。我们还每年定期组织学员参加国内、国际机器人比赛及夏令营活动，让孩子从小参与国际交流，提升孩子自信心与沟通力。
+     </div>
+     <div class="organizer-tu tc">
+        <p><img src="images/home_pic1.jpg"> <span class="tc">省长都点赞</span></p>
+        <p><img src="images/home_pic2.jpg"></p>
+     </div>
+     <div class="organizer-btn tc"><a href="#"></a></div>
+  </div>
+
+</div>
+</div>
+
+
+<!--关注弹窗--> 
+<div class="modal fade" id="Enter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+
+  <div class="modal-content">
+    <div class="modal-close"><a role="button" class="modal-close-btn" data-dismiss="modal"></a></div>       
+    <div class="modal-title tc">【游戏流程】</div>
+    <div class="modal-body mt30 tc">
+      <p>长按二维码进入公众号</p>
+      <p><img src="images/mmexport.jpg" style="width:123px; height:auto;" /></p>
+      <p>回复"<strong class="red">打地鼠</strong>"，<br/>或点击相应菜单即可开始游戏</p>
+    </div>  
+  </div>
+    
+</div>
+</div>  
+<!--关注弹窗 end-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	var themeW=$(".game-theme img").width();
+	$(".game-theme").css("width",themeW+"px");
+	
+	var	winWidth=$(window).width();
+	var element = document.getElementById('myimage');
+	if(winWidth>480){
+		element.src = "images/home_theme2.png";
+		$(".game-theme").css("width","100%");
+	}else{
+		element.src = "images/home_theme.png";
+		$(".game-theme").css("width",themeW+"px");
+	}
+	
+	window.onresize=function(){
+        location=location;     
+        };
+    return false;
+});
+</script>
+</body>
+</html>

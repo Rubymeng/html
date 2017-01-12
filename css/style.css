@@ -1,0 +1,754 @@
+﻿html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, img, dl, dt, dd, ol, ul, li, form, label, input, select, table {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 24px;
+	color: #444;
+	background: #9cd6ef url(../images/game_bg.jpg) no-repeat;
+	background-size: 100% auto;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;  
+    -webkit-appearance: none;
+}
+ul, li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+a:focus {
+	outline: none;
+	-moz-outline: none;
+}
+.f_l {
+	float: left;
+}
+.f_r {
+	float: right;
+}
+.tl {
+	text-align: left;
+}
+.tc {
+	text-align: center;
+}
+.tr {
+	text-align: right;
+}
+.clear {
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+.red {
+	color: #e53a35;
+}
+.middle {
+	vertical-align: middle;
+}
+img {
+	max-width: 100% !important;
+}
+table {
+	border-collapse: collapse;
+}
+.mt10 {
+	margin-top: 10px !important;
+}
+.mt20 {
+	margin-top: 20px !important;
+}
+.mt25 {
+	margin-top: 25px !important;
+}
+.mt30 {
+	margin-top: 30px !important;
+}
+.f12 {
+	font-size: 12px;
+}
+
+.warpper-game {
+	position: relative;
+	height: 100%;
+}
+.game-home {
+	background-color:#1f5583;
+}
+.game-content {
+	height: 100%;
+}
+
+/***主页***/
+.game-theme {
+	position: relative;
+	margin: 0 auto;
+}
+.game-theme img {
+	/*width: 360px;*/
+	height: auto;
+}
+.game-operate {
+    margin: 0 auto;
+    width: 360px;
+    left: 50%;
+    position: absolute;
+    margin-left: -180px;
+}
+.game-operate a {
+	position: absolute;
+	width: 63px;
+	height: 65px;
+	display: block;
+}
+.game-operate a.btn-rule {
+	left: 50px;
+	bottom: 0px;
+	background: url(../images/home_btn_jp.png) no-repeat;
+	background-size: contain;
+}
+.game-operate a.btn-rank {
+	left: 140px;
+	bottom: 10px;
+	background: url(../images/home_btn_ph.png) no-repeat;
+	background-size: contain;
+}
+.game-operate a.btn-enter {
+	left: 240px;
+	bottom: -5px;
+	width: 71px;
+	height: 73px;
+	background: url(../images/home_btn_enter.png) no-repeat;
+	background-size: contain;
+}
+.game-operate a.btn-start {
+	left: 240px;
+	bottom: -5px;
+	width: 71px;
+	height: 73px;
+	background: url(../images/home_btn_start.png) no-repeat;
+	background-size: contain;
+}
+.home-organizer {
+	padding: 15px;
+}
+.organizer-title {
+	color: #a3f9ff;
+	font-weight: bold;
+}
+.organizer-title i {
+	width: 25px;
+	height: 20px;
+	display: inline-block;
+	background: url(../images/home_ling.png) no-repeat;
+	background-size: contain;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.organizer-p {
+	font-size: 12px;
+	color: #9accec;
+	margin-top: 10px;
+	line-height: 22px;
+}
+.organizer-tu {
+	padding: 0 10px;
+}
+.organizer-tu p {
+	position: relative;
+	margin: 15px auto 0;
+	line-height: 0;
+	width: 280px;
+	overflow: hidden;
+}
+.organizer-tu p span {
+	position: absolute;
+	background-color: rgba(0,0,0,.5);
+	display: block;
+	left: 2px;
+	bottom: 2px;
+	width: 276px;
+	height: 30px;
+	line-height:30px;
+	color:#fff;
+}
+.organizer-tu p img {
+	width: 280px;
+	height: auto;
+	border: 2px #fff solid;
+}
+.organizer-btn {
+	margin-top: 15px;
+}
+.organizer-btn a {
+	width: 170px;
+	height: 35px;
+	margin: 0 auto;
+	background: url(../images/home_btn_see.png) no-repeat;
+	background-size: contain;
+	display: block;
+}
+
+/***游戏***/
+.paragon-bg {
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: url(../images/game_youxi_bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+.vendor-countdown {
+	position: relative;
+	height: 180px;
+	/*overflow: hidden;*/
+}
+.countdown-time {
+	position: absolute;
+	left: 15px;
+	top: 12px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff860e;
+	width: 105px;
+	height: 47px;
+	background: url(../images/countdown_time.png) no-repeat;
+	background-size: contain;
+}
+.countdown-time #timeOut {
+	line-height: 64px;
+	margin-left: 30px;
+	font-weight: bold;
+	color:#ff3553;
+}
+.button_style {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	width: 186px;
+	height: 68px;
+	margin-left: -93px;
+	background: url(../images/game_btn_star.png) no-repeat;
+	background-size: contain;
+	border: none;
+}
+.button_style:focus {
+	outline: none;
+}
+.countdown-share {
+	position: absolute;
+	right: 12px;
+	top: 2px;
+	width: 46px;
+	height: 80px;
+	background: url(../images/countdown_share.png) no-repeat;
+	background-size: contain;
+}
+.countdown-share-a {
+	width: 46px;
+	height: 80px;
+	display: block;
+}
+.countdown-jihui {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 120px;
+	color: #0e5c8e;
+	font-size: 16px;
+}
+.countdown-jihui span {
+	color: #fdd836;
+	font-size: 24px;
+	font-weight: bold;
+}
+.mainBody {
+	margin-top: 15px;
+}
+.mainBody .col-xs-4 {
+	margin-bottom: 5px;
+}
+.mainBody .col-xs-4 img {
+	width: 82px;
+	height: 75px;
+}
+
+/**排行榜**/
+.rank-bg {
+	margin-top: 20px;
+}
+.rank-bg-top {
+	width: 360px;
+	height: 67px;
+	margin: 0 auto;
+	background: url(../images/rank_bg_top.png) no-repeat;
+	background-size: contain;
+	padding-top: 13px;
+}
+.rank-bg-top-text {
+	width: 95px;
+	height: 36px;
+	background: url(../images/rank_bg_top_ph.png) 0 0 no-repeat;
+	background-size: 95px 108px;
+	margin: 0 0 0 70px;
+}
+.text-rules {
+	background-position: 0 -36px;
+}
+.text-prize {
+	background-position: 0 -72px;
+}
+.rank-bg-middle {
+	width: 360px;
+	min-height: 70px;
+	margin: 0 auto;
+	background: url(../images/rank_bg_middle.png) repeat-y;
+	background-size: contain;
+}
+.rank-bg-bottom {
+	width: 360px;
+	height: 56px;
+	margin: 0 auto;
+	background: url(../images/rank_bg_bottom.png) no-repeat;
+	background-size: contain;
+}
+.rank-box {
+	margin: 0 30px;
+	padding-bottom: 10px;
+}
+.rank-list {
+	padding: 15px 10px;
+	border-bottom: 1px #f2f2f2 solid;
+}
+.rank-list-ph {
+	width: 25px;
+	height: 30px;
+	margin: 6px 12px 0 0;
+}
+.rank-list-ph span {
+	display: inline-block;
+	margin-top: 5px;
+}
+.rank-list-one {
+	background: url(../images/rank_one.png) no-repeat;
+	background-size: contain;
+}
+.rank-list-two {
+	background: url(../images/rank_two.png) no-repeat;
+	background-size: contain;
+}
+.rank-list-three {
+	background: url(../images/rank_three.png) no-repeat;
+	background-size: contain;
+}
+.rank-list-name img {
+	width: 42px;
+	height:42px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.rank-list-name {
+	color: #666;
+}
+.rank-list-score {
+	padding: 0px 5px 0 20px;
+	border-left: 2px #e5e5e5 solid;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #e53a35;
+}
+.rank-list-score span {
+	font-size: 13px;
+	font-weight: normal;
+	color: #666;
+}
+.rank-tips {
+	position: relative;
+	width: 100%;
+	padding: 5px 10px 5px 20px;
+	margin-top: 15px;
+	border-radius: 50px;
+	background-color: #feefd3;
+	font-size: 12px;
+}
+.rank-tips-L {
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	width: 30px;
+	height: 24px;
+	background: url(../images/rank_L.png) no-repeat;
+	background-size: contain;
+}
+
+/**规则 奖品**/
+.rules-c {
+	margin: 0 30px;
+	padding-top: 10px;
+}
+.rules-prize li {
+	position: relative;
+	width: 240px;
+	height: 210px;
+	margin: 15px auto 35px;
+    background: url(../images/rules_prize_bg.png) no-repeat;
+	background-size: contain;
+}
+.rules-prize-one, .rules-prize-two, .rules-prize-three {
+	position: absolute;
+	left: 50%;
+	top: -14px;
+	width: 168px;
+	height: 33px;
+	margin-left: -84px;
+}
+.rules-prize-one {
+    background: url(../images/rules_prize_one.png) no-repeat;
+	background-size: contain;
+}
+.rules-prize-two {
+    background: url(../images/rules_prize_two.png) no-repeat;
+	background-size: contain;
+}
+.rules-prize-three {
+    background: url(../images/rules_prize_three.png) no-repeat;
+	background-size: contain;
+}
+
+.rules-prize-pingheng img {
+	width: 160px;
+	height: auto;
+	margin-top: 32px;
+}
+.rules-prize-h3 {
+	color: #fdd836;
+}
+.rules-prize-p {
+	font-size: 12px;
+	color: #FFF;
+	line-height: 20px;
+	margin-top:2px;
+}
+.rules-prize-four {
+	padding: 20px;
+}
+.rules-prize li.rules-F {
+	height: 160px;
+    background: url(../images/rules_prize_bg.png) no-repeat;
+	background-size: 240px 160px;
+}
+.rules-prize-L {
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	width: 40px;
+	height: 29px;
+	background: url(../images/rules_prize_L.png) no-repeat;
+	background-size: contain;
+}
+.rules-prize-h4 {
+	color: #fdd836;
+}
+.rules-prize-h4 span {
+	font-size: 12px;
+	margin-left: 8px;
+}
+.rules-prize-tips {
+	font-size: 12px;
+}
+.rules-prize-tips h3 {
+	font-weight: bold;
+	font-size: 14px;
+}
+.rules-prize-end {
+	width: 335px;
+	height: 40px;
+	line-height: 36px;
+	margin: 5px auto 15px;
+	background: url(../images/rules_prize_end.png) no-repeat;
+	background-size: contain;
+}
+
+
+/*栅格系统*/
+.row {
+	margin: 0 auto;
+	width: 82%;
+	position: relative;
+	overflow: hidden;
+}
+.row:before, .row:after {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;/*
+  padding-left: 15px;
+  padding-right: 15px;*/
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-11 {
+  width: 91.66666667%;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+.col-xs-8 {
+  width: 66.66666667%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+.col-xs-4 {
+  width: 33.33333333%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+
+/***弹窗***/
+.fade {
+  opacity: 0;
+  display: none;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+  display: block;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1050;
+  display: none;
+  outline: 0;
+  margin-left: -147px;
+  margin-top: -160px;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate3d(0, -50%, 0);
+       -o-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+/*.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}*/
+.modal-dialog {
+  position: relative;
+}
+.modal-content {
+  position: relative;
+  width: 295px;
+  height: 320px;
+  background: url(../images/pop_box_bg.png) no-repeat;
+  background-size: contain;
+  /*overflow: hidden;*/
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=80);
+  opacity: .8;
+}
+.modal-title {
+	height: 42px;
+	line-height: 42px;
+	padding-top: 34px;
+	color: #e53a35;
+	font-weight: bold;
+	font-size: 16px;
+}
+.modal-body {
+}
+.modal-score {
+	width: 260px;
+    height: 230px;
+    background: url(../images/pop_score_bg.png) no-repeat;
+    background-size: contain;
+}
+.modal-score-t {
+	padding-top: 65px;
+	color: #FFF;
+}
+.modal-score-NO {
+	font-size: 70px;
+	margin-top: 65px;
+	color:#FFF;
+	text-shadow: 0 0 6px #7f0400;
+	font-family: cursive;
+}
+.modal-submit-box {
+	text-align: center;
+}
+.modal-submit-box p {
+	margin-top: 14px;
+}
+.submit-input {
+	width: 70%;
+	height: 38px;
+	background-color: #fff;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	padding: 0 5px;
+	display: inline-block;
+}
+.modal-btn-submit a {
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	width: 186px;
+	height: 68px;
+	margin-left: -93px;
+	background: url(../images/game_btn_submit.png) no-repeat;
+    background-size: contain;
+}
+.modal-close a.modal-close-btn {
+	width: 35px;
+	height: 36px;
+	display: block;
+	position: absolute;
+	right: -10px;
+	top: 5px;
+	cursor: pointer;
+	background: url(../images/pop_box_close.png) no-repeat;
+	background-size: contain;
+}
+.modal-score .modal-close a.modal-close-btn {
+    right: -25px;
+    top: -20px;
+}
+.sustain {
+	margin-top: -230px;
+}
+.modal-con-share {
+	margin-left: 40px;
+	width: 280px;
+}
+.share-img {
+	width: 71px;
+	height: 80px;
+	margin-left: 135px;
+	background: url(../images/pop_share.png) 0 0 no-repeat;
+	background-size: contain;
+}
+.modal-con-share p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #FFF;
+}
+.modal-btn-know a {
+	width: 128px;
+	height:34px;
+	margin: 25px auto 0;
+	background: url(../images/pop_btn_know.png) 0 0 no-repeat;
+	background-size: contain;
+	display: block;
+	text-indent: -9999px;
+}
+
+
+@media (max-width:320px) {
+.rank-bg-top {
+    width: 330px;
+    height: 61px;
+}
+.rank-bg-middle {
+    width: 330px;
+}
+.rank-bg-bottom {
+    width: 330px;
+    height: 51px;
+}
+.rank-bg-top-text {
+    margin: 0 0 0 58px;
+}
+.rules-prize-end {
+    width: 300px;
+    height: 36px;
+    line-height: 32px;
+}
+.vendor-countdown {
+    height: 150px;
+}
+.mainBody {
+    margin-top: 0px;
+}
+.mainBody .col-xs-4 {
+    margin-bottom: -5px;
+}
+}
+@media (min-width:481px) {
+.game-theme {
+	background: url(../images/game_home_bg.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+.game-theme img {
+    width: 375px;
+    height: auto;
+}
+}

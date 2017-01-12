@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>游戏</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<body>
+<div class="warpper-game">
+   <div class="paragon-bg"></div>
+   
+    <div id="text">
+    <form name="form1" id="form1">
+      <div class="vendor-countdown">
+          <!--<div class="countdown-goal tc"><div id="score" class="goal-fs">0</div></div>-->
+          <div class="countdown-time tc"><div id="timeOut">30s</div></div>
+          <div class="countdown-share tc"><a class="countdown-share-a" href="#Score" role="button" data-toggle="modal"></a></div>
+          <input name="btn_start" type="button" class="button_style" id="btn_start" onclick="startGame()" value="" />
+          <div class="countdown-jihui tc">您还有 <span>5</span> 次机会</div>
+       </div>
+       
+      <table border="0" cellpadding="0" cellspacing="0" style="display:none;">
+        <tr>
+          <td class="hidden">游戏时间:</td>
+          <td class="hidden"><input name="txt_gameTime" type="text" id="txt_gameTime" value="1" size="10" /></td>
+        </tr>
+        <tr>
+          <td class="hidden">倒计时间:</td>
+          <td class="hidden"><div id="timeOut"></div></td>
+          </tr>
+        <tr>
+          <td class="hidden">地鼠出现间隔:</td>
+          <td class="hidden"><input name="txt_remainedTime" type="text" id="txt_remainedTime" value="1" size="10" /></td>
+          </tr>
+        <tr>
+          <td class="hidden">停留时间:</td>
+          <td class="hidden"><input name="txt_stayTime" type="text" id="txt_stayTime" value="1" size="10" /></td>
+          </tr>
+        <tr>
+          <td class="hidden">得分情况:</td>
+          <td class="hidden"><div id="score"></div></td>
+          </tr>
+        <tr>
+          <td class="hidden"><input name="btn_start" type="button" class="button_style" id="btn_start" onclick="startGame()" value="开始游戏" /></td>
+          <td class="hidden"><input name="btn_end" type="reset" class="button_style" id="btn_end" onclick="stopGame()" value="退出游戏" disabled="disabled"/></td>
+        </tr>
+      </table>
+      </form>
+    </div>
+
+    <div id="mainBody" class="mainBody">
+      <div class="row" style="width:100%;">
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+        <div class="col-xs-4 tc"><img src="images/vendor_people00.png " onclick="hitMouse(this)" /></div>
+      </div>  
+    </div>
+
+</div>
+
+<!--弹窗-得分-->
+<div class="modal fade" id="Score" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal-score">
+           <div class="modal-close"><a role="button" class="modal-close-btn" data-dismiss="modal"></a></div>       
+           <div class="modal-title modal-score-t tc">【本局成绩】</div>
+           <div class="modal-body tc">
+              <div id="score" class="modal-score-NO">68</div>
+           </div>  
+        </div>
+    </div>
+</div>
+<!--弹窗-得分 end-->
+
+
+<!--弹窗-提交信息-->
+<div class="modal fade" id="Submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!--<div class="modal-close"><a role="button" class="modal-close-btn" data-dismiss="modal"></a></div>-->       
+            <div class="modal-title tc" style="padding-top:25px;">中场休息~</div>
+            <div class="modal-body mt20 tc">
+              <p class="f12">先提交一下您的信息吧，中奖了才好联系您呢~</p>
+              <div class="modal-submit-box">
+                 <p>姓名： <input name="" type="text" class="submit-input" value="" /></p>
+                 <p>电话： <input name="" type="text" class="submit-input" value="" /></p>
+                 <p>地址： <input name="" type="text" class="submit-input" value="" /></p>
+              </div>
+              
+            </div>
+            <div class="modal-btn-submit"><a href="#">提交</a></div> 
+        </div>
+    </div>
+</div>
+<!--弹窗-提交信息 end-->
+
+
+<!--弹窗-分享-->
+<div class="modal fade sustain" id="Share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-con-share tc">
+            <p class="share-img"></p>
+            <p>点这里，邀请小伙伴们<br/>一起来抢圣诞礼物哦！</p>
+            <div class="modal-btn-know tc">
+                <a href="#" data-dismiss="modal"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹窗-分享 end-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+// 初试化游戏的函数
+var gameTime;//游戏时间
+var intervalTime;//地鼠出现的间隔时间
+var stayTime;//地鼠停留时间
+var beginTime;//游戏开始时间
+var remainTime;//游戏倒计时时间
+var remainTimerId;//倒计时计时器id
+var showMouseTimerId;//显示地鼠的计时器id
+var stayTimerId;
+var totalMouse=0;//出现的总的地鼠个数
+var hitMouseNum=0;//击中的地鼠个数
+var score=0;//得分
+function startGame(){
+	qingling();
+	initGame();
+	checkTime();
+	showMouse();					 
+}
+function qingling(){
+	document.getElementById('score').innerHTML=null;
+	totalMouse=0;
+	hitMouseNum=0;
+	score=0;
+	}
+//初始化游戏的操作
+function initGame(){
+	gameTime = document.form1.txt_gameTime.value;//游戏时间
+	intervalTime = document.form1.txt_remainedTime.value;//地鼠出现间隔时间
+	stayTime = document.form1.txt_stayTime.value;//地鼠出现后停留的时间
+	//alert(document.form1.btn_start.disabled);
+	//alert(document.form1.btn_end.disabled);
+	document.form1.btn_start.disabled=true;//开始时开始游戏按钮可用
+	document.form1.btn_end.disabled=false;//开始时退出游戏按钮不可用
+	document.form1.txt_gameTime.disabled=true;//开始游戏前文本框可输入时间设定值
+	document.form1.txt_remainedTime.disabled=true;
+	document.form1.txt_stayTime.disabled=true;
+	beginTime = new Date();//获取游戏开始时的时间	
+}
+//完成倒计时的检查工作
+function checkTime(){
+	var nowTime = new Date();//获取系统时间，以计算游戏已经持续的时间
+	remainTime = gameTime*30-parseInt((nowTime.getTime()-beginTime.getTime())/1000);//倒计时=游戏时间-(系统当前时间-游戏开始时间)
+	document.getElementById('timeOut').innerHTML=remainTime+'s';
+	remainTimerId = window.setTimeout('checkTime()',1000);
+}
+
+//显示地鼠
+function showMouse(){//0-24
+	var rd = parseInt(Math.random()*8)//产生0-24的随机数
+	document.images[rd].src='images/vendor_hole01.png';//随机出现地鼠
+	totalMouse++;//出现地鼠总个数加一
+	showMouseTimerId = setTimeout('showMouse()',intervalTime*800);//每隔指定的时间间隔出现地鼠
+	stayMouseTimerId = setTimeout('autoHidden('+rd+')',stayTime*1000);
+	if(remainTime==0){
+		stopGame();	
+	}
+}
+//打击地鼠
+function hitMouse(mouse){	
+	var src = mouse.src;
+	src = src.substr(src.length-17);	
+	if(src=='vendor_hole01.png'){
+		hitMouseNum++;
+		getScore();
+		xx = mouse;
+		mouse.src='images/vendor_hole02.png'
+		setTimeout('hidden(xx)',500);		
+	}	
+}
+function hidden(obj){	
+	obj.src='images/vendor_people00.png ';
+}
+//地鼠自动消失
+function autoHidden(rd){
+	document.images[rd].src='images/vendor_people00.png '
+	getScore();
+	//计算分数
+}
+//计算分数
+function getScore(){
+	var tatolScore = totalMouse*100;//计算总分数
+	//var score = (hitMouseNum-autoHiddenMouse)*100;//计算得分
+	score = (2*hitMouseNum-totalMouse)*100;
+	document.getElementById('score').innerHTML=''+hitMouseNum+''
+}
+//停止游戏 让游戏回到游戏开始前状态
+function stopGame(){
+	//将所有的图片恢复到游戏开始前的状态
+	for(var i=0; i<document.images.length;i++){
+		document.images[i].src='images/vendor_people00.png ';	
+	}
+	clearTimeout(remainTimerId);
+	clearTimeout(showMouseTimerId);
+	clearTimeout(stayMouseTimerId);
+	document.getElementById('timeOut').innerHTML='0s';
+	document.form1.btn_start.disabled=false;
+	document.form1.btn_end.disabled=true;
+	document.form1.txt_gameTime.disabled=false;
+	document.form1.txt_remainedTime.disabled=false;
+	document.form1.txt_stayTime.disabled=false;	
+}
+</script>
+<script>
+$(function(){
+	$('img').bind('focus',function(){
+		if(this.blur){ //如果支持 this.blur
+			this.blur();
+		};
+	});
+});
+</script>
+</body>
+</html>
